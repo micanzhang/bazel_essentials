@@ -4,6 +4,8 @@ load("//build_rules:init_go.bzl", "init_go")
 
 init_go()
 
-load("//build_rules:go.bzl", "go_repositories")
+load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")
 
-go_repositories()
+go_rules_dependencies()
+
+go_register_toolchains()
